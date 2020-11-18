@@ -1,0 +1,4 @@
+markdown: kramdown
+baseurl: /rainy
+exclude:
+  - README.md
