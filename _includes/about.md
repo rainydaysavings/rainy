@@ -6,22 +6,21 @@ Video game enthusiast currently striving to pursue a career in game development.
 
 ## Interests
 ### Video Games
-I blame my uncle for this addiction, since he introduced me to the medium with an old Atari 
-one christmas night.
+For many an addiction, but for those who play, a tremendously powerful medium.
 
 Throughout the years I've seen the industry growing and the stigma around it shrinking, 
 I wish to be able to create experiences such as those that helped me grow and define 
 what I am now.
 
+Favourites are Sly Cooper 2, MGS: Peace Walker and GTA: Vice City.
+
 ### Music
 Progressive, industrial and experimental.
 
-Was able to see God Speed You Black Emperor! live, it was by a long shot, the best concert 
-I ever gone to.
+Go and listen to God Speed You Black Emperor!.
 
 ### Movies
-Anything ridiculously bad. Watching funny bad movies has become something of a ritual 
-between me and friends.
+Anything ridiculously bad.
 
 ### GNU/Linux
 Sometimes I feel I spend more time perfecting my workflow than really working.

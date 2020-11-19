@@ -101,11 +101,32 @@ a {
     margin-top: 0.5em;
 }
 
-.my-path {
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 4;
+/* TEXT ANIMATION */
+.text-animation {
+    display: none;
+    position: relative;
+    color: var(--fg1);
+    font-size: 5em;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 1px;
+    line-height: 1;
+    margin-bottom: 0.5em;
 }
+
+.text-animation .letter {
+    display: inline-block;
+    opacity: 0;
+}
+
+.cursor {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 0.1em;
+    background: var(--fg1);
+    z-index: 1;
+}
+
 /* RESPONSIVE */
 @media only screen and (max-width: 1200px) {
     #main {
