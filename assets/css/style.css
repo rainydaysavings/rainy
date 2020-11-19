@@ -68,9 +68,11 @@ a {
 #navigation {
     height: 100vh;
     text-align: center;
+    justify-content: center;
+    vertical-align: center;
+    position: fixed;
     float: left;
     display: flex;
-    justify-content: center;
     padding: 1em;
     writing-mode: tb;
     writing-mode: tb-rl;
@@ -94,10 +96,16 @@ a {
 #main h2 {
     margin-top: 1em;
 }
+
 #main h3 {
     margin-top: 0.5em;
 }
 
+.my-path {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 4;
+}
 /* RESPONSIVE */
 @media only screen and (max-width: 1200px) {
     #main {
@@ -110,7 +118,7 @@ a {
 @media only screen and (max-width: 700px) {
     #main {
         padding: 2em;
-        margin-left: 0;
-        margin-right: 0;
+        margin-left: 8%;
+        margin-right: 8%;
     }
 }

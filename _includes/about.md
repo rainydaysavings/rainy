@@ -1,8 +1,3 @@
----
-layout: default
-title: About
----
-
 # About
 Computer Science student at University of Porto, for professional information please 
 take a look at my Curriculum Vitae.
