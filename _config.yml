@@ -42,7 +42,7 @@ incremental         : false
 detach              : false
 port                : 4000
 host                : 127.0.0.1
-baseurl             : "https://rainydaysavings.github.io/rainy/" # does not include hostname
+baseurl             : "/rainy" # does not include hostname
 repository          : “rainydaysavings/rainy”
 show_dir_listing    : false
 
