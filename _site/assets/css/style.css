@@ -1,0 +1,145 @@
+/* RESET CSS */
+:link, :visited {
+    text-decoration: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6, pre, code {
+    font-size: 1em;
+}
+
+ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, body, html, p, blockquote, fieldset, input, textarea {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+a img, :link img, :visited img {
+    border: none;
+}
+
+address {
+    font-style: normal;
+}
+
+:focus {
+    outline: none;
+}
+
+::-moz-focus-inner {
+    border: 0;
+}
+
+/* GENERAL RULES */
+:root {
+    --bg1: #BBBDF6;
+    --fg1: #1C1C1C;
+}
+
+body {
+    background-color: var(--bg1);
+    color: var(--fg1);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+}
+
+h1 {
+    font-size: 1.8em;
+    font-family: 'Raleway', sans-serif;
+}
+h2 {
+    font-size: 1.5em;
+    font-family: 'Raleway', sans-serif;
+}
+h3 {
+    font-size: 1.2em;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* NAVIGATION BAR */
+a {
+    color:inherit;
+    text-decoration: none;
+}
+
+#navigation {
+    height: 100vh;
+    text-align: center;
+    justify-content: center;
+    vertical-align: center;
+    position: fixed;
+    float: left;
+    display: flex;
+    padding: 1em;
+    writing-mode: tb;
+    writing-mode: tb-rl;
+    writing-mode: vertical-lr;
+    writing-mode: sideways-lr;
+    box-sizing: border-box;
+}
+#navigation a h1:after {
+    content: "_";
+    margin-top: 0.8em;
+}
+
+/* MAIN CONTENT */
+#main {
+    display: flex;
+    flex-direction: column;
+    padding: 5em;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+#main h2 {
+    margin-top: 1em;
+}
+
+#main h3 {
+    margin-top: 0.5em;
+}
+
+/* TEXT ANIMATION */
+.text-animation {
+    display: none;
+    position: relative;
+    color: var(--fg1);
+    font-size: 5em;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 1px;
+    line-height: 1;
+    margin-bottom: 0.5em;
+}
+
+.text-animation .letter {
+    display: inline-block;
+    opacity: 0;
+}
+
+.cursor {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 0.1em;
+    background: var(--fg1);
+    z-index: 1;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 1200px) {
+    #main {
+        padding: 4em;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    #main {
+        padding: 2em;
+        margin-left: 8%;
+        margin-right: 8%;
+    }
+}
