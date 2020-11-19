@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{{ page.title }}</title>
+        <link rel="stylesheet" href="/assets/css/style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@700&display=swap" rel="stylesheet">
+        <script src="/assets/js/animation.js"></script>
+        <script src="/assets/js/anime.min.js"></script>
+    </head>
+    <body onload="box_anim()">
+        <div id="content">
+            <div id="header">
+                {% include header.html %}
+            </div>
+            <div id="main">
+                {{ content }}
+            </div>
+        </div>
+    </body>
+</html>
