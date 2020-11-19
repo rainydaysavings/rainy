@@ -5,7 +5,7 @@ function anim() {
     element.style.display = 'block';
 
     const letters = Array.from(element.querySelectorAll('.letter'));
-    const TYPE_AFTER_MS = 3_000;
+    const TYPE_AFTER_MS = 2_000;
     const JUMP_AFTER_MS = 250;
 
     const blink = anime({
