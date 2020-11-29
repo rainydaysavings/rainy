@@ -102,66 +102,83 @@ a {
 }
 
 /* TEXT ANIMATION */
-.text-animation {
-    display: none;
-    position: relative;
-    color: var(--fg1);
+#typing-text {
     font-size: 5em;
+    height: 1em;
     font-family: 'Raleway', sans-serif;
-    letter-spacing: 1px;
-    line-height: 1;
+    outline: none;
+    resize: none;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: var(--bg1);
     margin-bottom: 0.5em;
 }
 
-.text-animation .letter {
-    display: inline-block;
-    opacity: 0;
-}
-
-.cursor {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 0.1em;
-    background: var(--fg1);
-    z-index: 1;
-}
-
 /* RESPONSIVE */
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1566px) {
     #main {
         padding: 4em;
         margin-left: 10%;
-        margin-right: 10%;
+        margin-right: 5%;
     }
 
-    .text-animation {
-        display: none;
-        position: relative;
-        color: var(--fg1);
-        font-size: 3em;
+    #typing-text {
+        font-size: 4em;
+        height: 1em;
         font-family: 'Raleway', sans-serif;
-        letter-spacing: 1px;
-        line-height: 1;
-        margin-bottom: 0.5em;
+        outline: none;
+        resize: none;
+        overflow: hidden;
+        box-sizing: border-box;
+        background-color: var(--bg1);
     }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 950px) {
     #main {
         padding: 2em;
         margin-left: 8%;
-        margin-right: 8%;
+        margin-right: 4%;
     }
 
-    .text-animation {
-        display: none;
-        position: relative;
-        color: var(--fg1);
-        font-size: 2em;
+    #typing-text {
+        font-size: 3em;
+        height: 1em;
         font-family: 'Raleway', sans-serif;
-        letter-spacing: 1px;
-        line-height: 1;
-        margin-bottom: 0.5em;
+        outline: none;
+        resize: none;
+        overflow: hidden;
+        box-sizing: border-box;
+        background-color: var(--bg1);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 1.5em;
+        font-family: 'Raleway', sans-serif;
+    }
+    h2 {
+        font-size: 1.2em;
+        font-family: 'Raleway', sans-serif;
+    }
+    h3 {
+        font-size: 1em;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    #main {
+        padding: 2em;
+    }
+
+    #typing-text {
+        font-size: 2em;
+        height: 1em;
+        font-family: 'Raleway', sans-serif;
+        outline: none;
+        resize: none;
+        overflow: hidden;
+        box-sizing: border-box;
+        background-color: var(--bg1);
     }
 }

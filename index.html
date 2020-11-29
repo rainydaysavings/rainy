@@ -2,9 +2,7 @@
 layout: default
 title: Home
 ---
-<div class="text-animation">
-    ./Eliseu Amaro
-</div>
+<label for="typing-text"></label><textarea id="typing-text" readonly></textarea>
 <div class="about">
     {% capture my_include %}{% include about.md %}{% endcapture %}
     {{ my_include | markdownify }}

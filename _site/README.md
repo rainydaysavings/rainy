@@ -1,2 +1,0 @@
-# rainy
-my personal webpage
