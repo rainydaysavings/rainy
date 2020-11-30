@@ -61,10 +61,8 @@ h3 {
 
 #content {
     display: flex;
+    margin-top: 5em;
     justify-content: center;
-    flex-direction: column;
-    margin: 5% 25% 5% 25%;
-    box-sizing: border-box;
 }
 
 /* NAVIGATION BAR */
@@ -74,13 +72,16 @@ a {
 }
 
 #navigation {
+    order: 1;
+    width: min-content;
     display: flex;
-    justify-content: center;
-    position: fixed;
+    align-self: flex-start;
     /* make sideways navigation across all browsers */
     writing-mode: vertical-lr;
     transform: rotate(180deg);
+    white-space: nowrap;
     box-sizing: border-box;
+    margin-right: 2em;
 }
 #navigation a {
     margin-bottom: 1em;
@@ -91,7 +92,8 @@ a {
 
 /* MAIN CONTENT */
 #main {
-    margin-left: 4em;
+    order: 2;
+    width: 40%;
 }
 #main h2 {
     margin-top: 1em;
@@ -103,7 +105,7 @@ a {
 
 /* TEXT ANIMATION */
 #typing-text {
-    font-size: 4em;
+    font-size: 3em;
     height: 1em;
     width: 100%;
     font-family: 'Raleway', sans-serif;
@@ -119,42 +121,22 @@ a {
 /* RESPONSIVE */
 @media only screen and (max-width: 1400px) {
     #main {
-        margin-left: 4em;
-    }
-
-    #typing-text {
-        font-size: 3em;
-    }
-
-    #content {
-        margin: 5% 15% 5% 15%;
+        width: 60%;
     }
 }
-
-
-@media only screen and (max-width: 777px) {
-    h1 {
-        font-size: 1.5em;
-        font-family: 'Raleway', sans-serif;
-    }
-    h2 {
-        font-size: 1.2em;
-        font-family: 'Raleway', sans-serif;
-    }
-    h3 {
-        font-size: 1em;
-        font-family: 'Raleway', sans-serif;
-    }
-
-    #main {
-        margin-left: 3em;
-    }
-
-    #typing-text {
-        font-size: 2em;
-    }
-
+@media only screen and (max-width: 800px) {
     #content {
-        margin: 2em 1em 1em 1em;
+        margin-top: 2em;
+    }
+    #main {
+        width: 100%;
+        padding-right: 1em;
+    }
+    #navigation {
+        margin-right: 1em;
+        margin-left: 1em;
+    }
+    #typing-text {
+        font-size: 2.2em;
     }
 }
