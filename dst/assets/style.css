@@ -59,6 +59,14 @@ h3 {
     font-family: 'Raleway', sans-serif;
 }
 
+#content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 5% 25% 5% 25%;
+    box-sizing: border-box;
+}
+
 /* NAVIGATION BAR */
 a {
     color:inherit;
@@ -66,32 +74,24 @@ a {
 }
 
 #navigation {
-    height: 100vh;
-    text-align: center;
-    justify-content: center;
-    vertical-align: center;
-    position: fixed;
-    float: left;
     display: flex;
-    padding: 1em;
-    writing-mode: tb;
-    writing-mode: tb-rl;
+    justify-content: center;
+    position: fixed;
+    /* make sideways navigation across all browsers */
     writing-mode: vertical-lr;
-    writing-mode: sideways-lr;
+    transform: rotate(180deg);
     box-sizing: border-box;
+}
+#navigation a {
+    margin-bottom: 1em;
 }
 #navigation a h1:after {
     content: "_";
-    margin-top: 0.8em;
 }
 
 /* MAIN CONTENT */
 #main {
-    display: flex;
-    flex-direction: column;
-    padding: 5em;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 4em;
 }
 #main h2 {
     margin-top: 1em;
@@ -103,8 +103,9 @@ a {
 
 /* TEXT ANIMATION */
 #typing-text {
-    font-size: 5em;
+    font-size: 4em;
     height: 1em;
+    width: 100%;
     font-family: 'Raleway', sans-serif;
     outline: none;
     resize: none;
@@ -112,48 +113,26 @@ a {
     box-sizing: border-box;
     background-color: var(--bg1);
     margin-bottom: 0.5em;
+    cursor: default;
 }
 
 /* RESPONSIVE */
-@media only screen and (max-width: 1566px) {
+@media only screen and (max-width: 1400px) {
     #main {
-        padding: 4em;
-        margin-left: 10%;
-        margin-right: 5%;
-    }
-
-    #typing-text {
-        font-size: 4em;
-        height: 1em;
-        font-family: 'Raleway', sans-serif;
-        outline: none;
-        resize: none;
-        overflow: hidden;
-        box-sizing: border-box;
-        background-color: var(--bg1);
-    }
-}
-
-@media only screen and (max-width: 950px) {
-    #main {
-        padding: 2em;
-        margin-left: 8%;
-        margin-right: 4%;
+        margin-left: 4em;
     }
 
     #typing-text {
         font-size: 3em;
-        height: 1em;
-        font-family: 'Raleway', sans-serif;
-        outline: none;
-        resize: none;
-        overflow: hidden;
-        box-sizing: border-box;
-        background-color: var(--bg1);
+    }
+
+    #content {
+        margin: 5% 15% 5% 15%;
     }
 }
 
-@media only screen and (max-width: 600px) {
+
+@media only screen and (max-width: 777px) {
     h1 {
         font-size: 1.5em;
         font-family: 'Raleway', sans-serif;
@@ -168,17 +147,14 @@ a {
     }
 
     #main {
-        padding: 2em;
+        margin-left: 3em;
     }
 
     #typing-text {
         font-size: 2em;
-        height: 1em;
-        font-family: 'Raleway', sans-serif;
-        outline: none;
-        resize: none;
-        overflow: hidden;
-        box-sizing: border-box;
-        background-color: var(--bg1);
+    }
+
+    #content {
+        margin: 2em 1em 1em 1em;
     }
 }
