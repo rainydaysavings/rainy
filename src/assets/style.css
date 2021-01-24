@@ -35,28 +35,71 @@ address {
 
 /* GENERAL RULES */
 :root {
-    --bg1: #BBBDF6;
-    --fg1: #1C1C1C;
+    --bg1: #FED766;
+    --fg1: #0C090D;
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body {
     background-color: var(--bg1);
     color: var(--fg1);
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.2em;
 }
 
 h1 {
-    font-size: 1.8em;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 1.00;
+    opacity: 1.00;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    letter-spacing: -0.60px;
+    word-spacing: 0.50px;
+    text-transform: capitalize;
 }
+
 h2 {
-    font-size: 1.5em;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.00;
+    opacity: 1.00;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    letter-spacing: -0.65px;
+    word-spacing: 0.00px;
+    text-transform: capitalize;
 }
+
 h3 {
-    font-size: 1.2em;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.00;
+    opacity: 1.00;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    letter-spacing: 0.00px;
+    word-spacing: 0.00px;
+    text-transform: capitalize;
+}
+
+p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.45;
+    opacity: 0.80;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    letter-spacing: -0.40px;
+    word-spacing: 0.20px;
+    text-transform: none;
 }
 
 #content {
@@ -95,12 +138,15 @@ a {
     order: 2;
     width: 40%;
 }
-#main h2 {
-    margin-top: 1em;
+
+.articles {
+    font-weight: bold !important;
+    text-decoration: underline !important;
+    padding: 0.5em;
 }
 
-#main h3 {
-    margin-top: 0.5em;
+.articles li {
+    margin-bottom: 0.5em;
 }
 
 /* TEXT ANIMATION */

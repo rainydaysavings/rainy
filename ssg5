@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!/bin/sh -e
 #
 # https://rgz.ee/bin/ssg5
 # Copyright 2018-2019 Roman Zolotarev <hi@romanzolotarev.com>
@@ -102,6 +102,7 @@ main() {
 
 	test -n "$urls" &&
 	render_sitemap "$urls" "$base_url" "$date" > "$dst/sitemap.xml"
+	render_article_list "$urls" "$base_url" "$dst" "$src"
 
 	print_status 'url' 'urls' "$urls" >&2
 	echo >&2
@@ -247,6 +248,20 @@ list_pages() {
 	sed 's#^./##;s#.md$#.html#;s#/index.html$#/#'
 }
 
+render_article_list() {
+	urls="$1"
+	base_url="$2"
+	items=""
+	for i in $1; do
+		if ! echo $i | grep -Eq "index|blog"; then
+			url="$i"
+			page_title=$(head -n 1 "$4/${i%\.html}.md" | cut -c 3-) 
+			item="<li><a href="\"${url}\"">${page_title}</a></li>"
+			items=$items$item
+		fi
+	done
+	sed -i '' -e "s|</article>|<ul class="articles">${items}</ul></article>|g" "$3/blog.html"
+}
 
 render_sitemap() {
 	urls="$1"
