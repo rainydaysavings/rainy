@@ -42,7 +42,8 @@ main() {
 	)
 
 	# files
-
+    rm -r dst
+    mkdir dst
 	title="$3"
 
 	h_file="$src/_header.html"
@@ -260,7 +261,7 @@ render_article_list() {
 			items=$items$item
 		fi
 	done
-	sed -i '' -e "s|</article>|<ul class="articles">${items}</ul></article>|g" "$3/blog.html"
+	sed -i '' -e "s|</article>|<ul class="articles">${items}</ul></article>|g" "$3/index.html"
 }
 
 render_sitemap() {
