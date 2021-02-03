@@ -1,3 +1,5 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway:900,700|Cabin:400';
+
 /* RESET CSS */
 :link, :visited {
     text-decoration: none;
@@ -36,6 +38,7 @@ address {
 /* GENERAL RULES */
 :root {
     --bg1: #FED766;
+    --bg2: #0C090D08;
     --fg1: #0C090D;
 }
 
@@ -47,59 +50,66 @@ html {
 body {
     background-color: var(--bg1);
     color: var(--fg1);
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Cabin', sans-serif;
+    margin: 2em;
 }
 
 h1 {
     font-family: "Raleway", sans-serif;
-    font-size: 30px;
-    font-weight: 900;
-    line-height: 1.00;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.20;
     opacity: 1.00;
     margin-top: 0px;
     margin-bottom: 10px;
-    letter-spacing: -0.60px;
-    word-spacing: 0.50px;
-    text-transform: capitalize;
+    letter-spacing: -0.72px;
+    word-spacing: 0.00px;
+    text-transform: none;
 }
 
 h2 {
     font-family: "Raleway", sans-serif;
-    font-size: 26px;
-    font-weight: 700;
-    line-height: 1.00;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.20;
     opacity: 1.00;
-    margin-top: 20px;
+    margin-top: 30px;
     margin-bottom: 5px;
-    letter-spacing: -0.65px;
+    letter-spacing: -0.72px;
     word-spacing: 0.00px;
-    text-transform: capitalize;
+    text-transform: none;
 }
 
 h3 {
     font-family: "Raleway", sans-serif;
-    font-size: 22px;
-    font-weight: 700;
-    line-height: 1.00;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.20;
     opacity: 1.00;
-    margin-top: 20px;
+    margin-top: 30px;
     margin-bottom: 5px;
     letter-spacing: 0.00px;
     word-spacing: 0.00px;
-    text-transform: capitalize;
+    text-transform: none;
 }
 
 p {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Cabin", sans-serif;
     font-size: 18px;
     font-weight: 400;
-    line-height: 1.45;
-    opacity: 0.80;
+    line-height: 1.60;
+    opacity: 0.70;
     margin-top: 0px;
-    margin-bottom: 15px;
-    letter-spacing: -0.40px;
-    word-spacing: 0.20px;
+    margin-bottom: 25px;
+    letter-spacing: -0.30px;
+    word-spacing: -0.10px;
     text-transform: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: underline !important;
+    font-weight: 500;
 }
 
 #content {
@@ -109,11 +119,6 @@ p {
 }
 
 /* NAVIGATION BAR */
-a {
-    color:inherit;
-    text-decoration: none;
-}
-
 #navigation {
     order: 1;
     width: min-content;
@@ -128,6 +133,8 @@ a {
 }
 #navigation a {
     margin-bottom: 1em;
+    color: inherit;
+    text-decoration: none !important;
 }
 #navigation a h1:after {
     content: "_";
@@ -142,11 +149,20 @@ a {
 .articles {
     font-weight: bold !important;
     text-decoration: underline !important;
-    padding: 0.5em;
 }
-
+.articles a {
+    text-decoration: none;
+    font-size: 1.2em;
+}
 .articles li {
     margin-bottom: 0.5em;
+}
+
+pre {
+    background-color: var(--bg2);
+    border-radius: 1em;
+    margin-bottom: 1em;
+    padding: 2em;
 }
 
 /* TEXT ANIMATION */
@@ -155,6 +171,7 @@ a {
     height: 1em;
     width: 100%;
     font-family: 'Raleway', sans-serif;
+    font-weight: 700;
     outline: none;
     resize: none;
     overflow: hidden;

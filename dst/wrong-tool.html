@@ -1,0 +1,85 @@
+<html lang="en-US">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>We make responsive websites with the wrong tool - 3&#47;02&#47;2021 &mdash; Eliseu's Blog</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/style.css">
+        <script src="assets/animation.js"></script>
+    </head>
+
+    <body onload="anim()">
+        <div id="content">
+            <nav id="navigation">
+                <a href="https://eliseuama.ro">
+                    <h1>Home</h1>
+                </a>
+                <a href="https://github.com/rainydaysavings/">
+                    <h1>Github</h1>
+                </a>
+                <a href="https://cv.eliseuama.ro">
+                    <h1>Curriculum Vitae</h1>
+                </a>
+            </nav>
+
+            <div id="main">
+                <label for="typing-text"></label><textarea id="typing-text" readonly></textarea>
+                <article>
+<h1 id="We%20make%20responsive%20websites%20with%20the%20wrong%20tool%20-%203&amp;#47;02&amp;#47;2021">We make responsive websites with the wrong tool - 3&#47;02&#47;2021</h1>
+
+<h2 id="Media%20queries%20are%20not%20maintainable">Media queries are not maintainable</h2>
+
+<p>​   Designing something is chaotic, no one really knows how it works, how it ticks. At any moment something <strong>needs</strong> to change, be redone or taken completely out of the picture.</p>
+
+<p>​   <em>That&#39;s how I do it, at least.</em></p>
+
+<p>​   <em>I don&#39;t really know what I&#39;m doing either.</em></p>
+
+<p>​   Designers are then forced to use alternative tools in the process of designing websites. Media queries are not maintainable, at some point something <strong>needs</strong> to change. In a real website this implies that the whole structure might fall apart, making it impossible to design something hands on.</p>
+
+<p>​   Why? Now, the <strong>media queries</strong>, need to change as well.</p>
+
+<h2 id="The%20problem">The problem</h2>
+
+<p>​   Media queries can only target the viewport,  which  means  that  each  part  of  the  interface can  only  respond  to  changes  of  the  (global)  &#8220;window&#8221; size. This is the issue. The key limitation.</p>
+
+<h2 id="Making%20responsive%20websites%20with%20the%20right%20tool">Making responsive websites with the right tool</h2>
+
+<p>​   Well, right now you can&#39;t.</p>
+
+<h2 id="Oh,%20so%20what%20now?">Oh, so what now?</h2>
+
+<p>​   Container queries are still just a proposal, maybe in 5 years it&#39;s a reality. We don&#39;t have 5 years. That&#39;s a long time. </p>
+
+<p>​   However, there&#39;s a simple alternative. Algorithmic layouts.</p>
+
+<pre><code class="language-css">.container {
+    display: flex;
+    flex-wrap: wrap;
+    --margin: 1rem;
+    --modifier: calc(var(--margin) * -1);
+    margin: calc(var(--margin) * -1);
+}
+
+.container &#62; * {
+    flex-grow: 1;
+    flex-basis: calc(var(--modifier) * 999);
+    margin: var(--margin);
+}
+</code></pre>
+
+<p>​   <a href="https://heydonworks.com/article/the-flexbox-holy-albatross-reincarnated/">Do check out Heydon Pickering&#39;s blog about them here.</a></p>
+
+<p>​   The flex-basis property sets the initial width for any item, and the state modifier serves as a switch between states at the break-point width.</p>
+
+<p>​   At the break-point width or above, the flex-basis value is absurdly high and thus every element takes an entire row. Below the break-point width, every element occupies the same row, these can then be equally distributed within it or individually controlled with the flex-grow property.</p>
+
+<p>​   Each block that makes an interface can then respond to it&#39;s size, independently from the viewport. Hope this helps.</p>
+
+<p>&#8212; the guy who doesn&#39;t know what he&#39;s doing</p>
+</article>
+</div>
+</div>
+</body>
+
+</html>
